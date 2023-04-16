@@ -1,5 +1,5 @@
 apiVersion: core.oam.dev/v1beta1
-kind: Component
+kind: Application
 metadata:
   name: cd-example
 spec:
