@@ -1,4 +1,4 @@
-module github.com/napptive/cd-example
+module github.com/ShivangShandilya/cd-example
 
 go 1.15
 
