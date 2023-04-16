@@ -1,4 +1,4 @@
-apiVersion: core.oam.dev/v1alpha2
+apiVersion: core.oam.dev/v1beta1
 kind: ApplicationConfiguration
 metadata:
   name: cd-example
@@ -10,7 +10,7 @@ spec:
     - componentName: cd-example
       traits:
         - trait:
-            apiVersion: core.napptive.com/v1alpha1
+            apiVersion: core.oam.dev/v1beta1
             kind: Ingress
             metadata:
               name: cd-example-ingress
