@@ -6,8 +6,8 @@ on:
     branches: [main]
 env:
   PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT}}
-  PLAYGROUND_ACCOUNT_NAME: napptive # TODO: Change with your Playground account name.
-  TARGET_DOCKER_REGISTRY: napptive # TODO: Change this with your docker account name.
+  PLAYGROUND_ACCOUNT_NAME: shivangshandilya83 # TODO: Change with your Playground account name.
+  TARGET_DOCKER_REGISTRY: shivangshandilya # TODO: Change this with your docker account name.
 jobs:
   build:
     name: Push docker images
