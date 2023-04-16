@@ -78,7 +78,7 @@ jobs:
       id: version
       run: echo "::set-output name=version::$(cat version)"
     - name: Push the application on the catalog
-      uses: napptive-actions/catalog-push-action@v2.2.4
+      uses: napptive-actions/catalog-push-action@v5.0.0
       with:
         applicationPath: ./build/k8s/
         namespace: ${{ env.PLAYGROUND_ACCOUNT_NAME }}
@@ -103,7 +103,7 @@ jobs:
     - name: Make scripts executable
       run: chmod +x ./scripts/*.sh
     - name: Get Kubeconfig      
-      uses: napptive-actions/playground-github-action@v2.2.4
+      uses: napptive-actions/playground-github-action@v5.0.0
       with:
         cmd: "get-kubeconfig" 
     - name: Get Version
@@ -129,6 +129,6 @@ jobs:
       id: appname
       run: echo "::set-output name=appname::${PLAYGROUND_ACCOUNT_NAME}/cd-example:${{ steps.get-version.outputs.version }}"
     - name: Deploy the app from the catalog
-      uses: napptive-actions/catalog-deploy-action@v2.2.4
+      uses: napptive-actions/catalog-deploy-action@v5.0.0
       with:        
         appName: ${{ steps.appname.outputs.appname }}
