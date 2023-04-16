@@ -35,7 +35,7 @@ jobs:
         with:
           key: k8s-yaml-${{ github.sha }}
           path: ./build/*
-      #checking-app
+      
   check-app:
     needs: build
     name: Check if the app are deployed
